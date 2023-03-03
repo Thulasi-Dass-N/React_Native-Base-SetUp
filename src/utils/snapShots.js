@@ -1,0 +1,1 @@
+export const BACK_ARROW = require("../assets/images/backArrowLine.png");

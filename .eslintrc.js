@@ -5,21 +5,21 @@ module.exports = {
 		browser: true,
 		es2021: true,
 		"react-native/react-native": true,
-		"jest/globals": true
+		"jest/globals": true,
 	},
 	extends: [
 		"plugin:react/recommended",
 		"prettier",
 		"eslint:recommended",
-		"plugin:jest/recommended"
+		"plugin:jest/recommended",
 	],
 
 	parserOptions: {
 		ecmaFeatures: {
-			jsx: true
+			jsx: true,
 		},
 		ecmaVersion: "latest",
-		sourceType: "module"
+		sourceType: "module",
 	},
 
 	plugins: ["react", "react-native", "detox"],
@@ -30,19 +30,20 @@ module.exports = {
 			"tab",
 			{
 				SwitchCase: 1,
-				ignoredNodes: ["ConditionalExpression"]
-			}
+				ignoredNodes: ["ConditionalExpression"],
+			},
 		],
 		"linebreak-style": ["error", "unix"],
 		quotes: ["error", "double"],
 		semi: ["error", "always"],
 		"no-console": ["error"],
-		"no-unused-vars": ["error", { vars: "all" }]
+		"no-unused-vars": ["error", {vars: "all"}],
+		"react/prop-types": "off",
 	},
 
 	settings: {
 		react: {
-			version: "detect"
-		}
-	}
+			version: "detect",
+		},
+	},
 };
