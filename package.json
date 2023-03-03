@@ -1,5 +1,5 @@
 {
-  "name": "Project_01",
+  "name": "project_01",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,9 +7,19 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint:fix": "eslint . --fix",
+    "lint": "eslint . --fix --max-warnings=0",
+    "format": "prettier . --write",
+    "pre-commit": "yarn run lint && yarn run test"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   },
   "dependencies": {
+    "eslint-plugin-detox": "^1.0.0",
     "react": "18.0.0",
     "react-native": "0.69.8"
   },
@@ -19,11 +29,20 @@
     "@react-native-community/eslint-config": "^2.0.0",
     "babel-jest": "^26.6.3",
     "eslint": "^8.35.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "husky": "^8.0.3",
     "jest": "^26.6.3",
+    "lint-staged": "^13.1.2",
     "metro-react-native-babel-preset": "^0.70.3",
+    "prettier": "^2.8.4",
     "react-test-renderer": "18.0.0"
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "description": "Base Project",
+  "main": "index.js",
+  "repository": "none",
+  "author": "Thulasi_Dass",
+  "license": "MIT"
 }
