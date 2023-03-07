@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import AppSearch from "./src/components/molecules/AppSearch";
+import AppSearch from "molecules/AppSearch";
 
 const App = () => {
   return (

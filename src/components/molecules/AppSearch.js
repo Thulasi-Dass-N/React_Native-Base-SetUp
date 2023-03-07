@@ -7,9 +7,9 @@ import {
   Pressable,
 } from "react-native";
 import React, { useState } from "react";
-import AppInput from "../atoms/AppInput";
+import AppInput from "components/atoms/AppInput";
 
-import { CANCEL, SEARCH, BACK_ARROW } from "../../utils/snapShots";
+import { CANCEL, SEARCH, BACK_ARROW } from "images/snapShots";
 const Search = ({
   Title,
   placeholderTextColor,
