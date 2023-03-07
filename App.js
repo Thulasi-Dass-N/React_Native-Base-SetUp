@@ -1,13 +1,12 @@
 import React from "react";
-import {View, Text, StyleSheet} from "react-native";
-
-import AppInput from "./src/components/atoms/AppInput";
+import { View, Text, StyleSheet } from "react-native";
+import AppSearch from "./src/components/molecules/AppSearch";
 
 const App = () => {
   return (
-    <View style={{flex: 1, justifyContent: "center"}}>
-			
-      <AppInput/>
+    <View style={{ flex: 1, justifyContent: "center" }}>
+      <AppSearch />
+
       <Text styles={styles.text}>Hello</Text>
     </View>
   );
@@ -23,9 +22,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
     alignItems: "center",
     alignSelf: "center",
-    borderWidth:1,
-    borderColor:"green"
-	
+    borderWidth: 1,
+    borderColor: "green",
   },
   text: {
     color: "white",
@@ -34,5 +32,4 @@ const styles = StyleSheet.create({
     lineHeight: 20,
     fontWeight: "400",
   },
-
 });
