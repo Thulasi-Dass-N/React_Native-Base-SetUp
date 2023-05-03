@@ -11,10 +11,10 @@ const AppTheme = ({children}) => {
   const [isLightTheme, setLightTheme] = useState(
     colorScheme === "dark" ? false : true,
   );
-  const toggleTheme = () => setLightTheme(previousState => !previousState);
+  const setTheme = () => setLightTheme(previousState => !previousState);
   const theme = {
     colors: isLightTheme ? color.lightColors : color.DarkColors,
-    toggleTheme,
+    setTheme,
     isLightTheme,
   };
   return (

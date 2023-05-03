@@ -16,13 +16,13 @@ const styles = StyleSheet.create({
     borderRadius: 45,
     backgroundColor: "green",
     justifyContent: "center",
-    paddingHorizontal: 30,
+    paddingHorizontal: 20,
     alignItems: "center",
     alignSelf: "center",
+    marginTop:10
   },
   Title: {
     color: "white",
-    fontFamily: "ClashDisplay-Regular",
     fontSize: 15,
     lineHeight: 20,
     fontWeight: "400",
