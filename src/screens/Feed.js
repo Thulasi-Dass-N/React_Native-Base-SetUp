@@ -1,9 +1,8 @@
-import { View, Text, Pressable } from "react-native";
-import React, { useState } from "react";
-import AppAlert from "../components/molecules/AppAlert";
+import { View, Button } from "react-native";
+import React from "react";
+import Toast from "react-native-toast-message";
 
-const Feed = ({ navigation }) => {
-  const [alertView, setAlertView] = useState(false);
+const Feed = () => {
   return (
     <View
       style={{
@@ -12,28 +11,22 @@ const Feed = ({ navigation }) => {
         alignItems: "center",
         justifyContent: "center",
       }}>
-      <Pressable
+      <Button
+        title="Show toast"
         onPress={() => {
-          setAlertView(true);
-          // <AppAlert Title="Alert123!!!" AlertMessage="gfhfhgfjhffhjfhj" />;
-          // navigation.navigate("Article");
-        }}>
-        <Text>feed</Text>
-      </Pressable>
-      <AppAlert
-        Alert="How May I Help You"
-        visible={alertView}
-        onRequestClose={() => {
-          setAlertView(false);
-        }}
-        SuccessName={"Yes!"}
-        CancelName={"No"}
-        SuccessButton={() => {
-          navigation.navigate("Article");
-          setAlertView(false);
-        }}
-        CancelButton={() => {
-          setAlertView(false);
+          Toast.show({
+            type: "success",
+            text1: "Sucessfully",
+            text2: "This is some something 👋",
+            onHide: () => {
+              // navigation.navigate("Article");
+            },
+            onShow: () => {
+              // navigation.navigate("Article");
+            },
+            position: "top",
+            topOffset: 40,
+          });
         }}
       />
     </View>
